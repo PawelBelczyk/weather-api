@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather app</title>
 </head>
 <body>
     
- <h1>Weather api</h1>
+ <h1>Weather app</h1>
 
-<form action="" method="post">
- <label for="user-input"></label>
- <input type="text" name="" id="user-input">
+<form id = "weather-form">
+ <label for="user-input">Enter city:</label>
+ <input type="text" name="" id="user-input" placeholder="Kraków" required>
 <button type="submit">Search</button>
 </form>
 <hr>
+<p id="message"></p>
 <div class="info-weather">
+    <img id="weather-icon" alt="weather-icon" hidden>
+
 <p>Location: <span id="location"></span></p>
 <p>Temperature: <span id="temperature"></span></p>
 <p>Feels like: <span id="feelsLike"></span></p>
@@ -26,6 +29,6 @@
 
 
 
-<script src="./script.js"></script>
+<script type="module" src="./index.js"></script>
 </body>
 </html>

@@ -1,5 +1,0 @@
-
-
-async function getWeatcher(city) {
-    
-}
