@@ -17,4 +17,4 @@ return data;
 
 }
 
-// weather.js odpowiada tylko i wyłącznie za komunikację z api.0
+// weather.js odpowiada tylko i wyłącznie za komunikację z api

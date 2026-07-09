@@ -3,6 +3,9 @@ import {getWeather} from "./weather.js";
 import {displayWeather, clearWeather} from "./dom.js";
 
 let unit ="C";
+ let currentWeather = null;
+
+
 
 const weatherForm = document.getElementById("weather-form");
 const userInput = document.getElementById("user-input");
@@ -19,9 +22,9 @@ weatherForm.addEventListener("submit", async (e) => {
   try { 
     message.textContent="Loading...";
     const data = await getWeather(userInput.value);
+    currentWeather = data;
     message.textContent ="";
-    
-    displayWeather(data, unit);
+     displayWeather(data, unit);
 
   } catch (error) {
     clearWeather();    
@@ -33,11 +36,20 @@ weatherForm.addEventListener("submit", async (e) => {
 
 
 celsiusBtn.addEventListener("click", () => {
-    unit ="C";
+    unit = "C";
+
+    if (currentWeather) {
+        displayWeather(currentWeather, unit);
+    }
 });
 
-fahrenheitBtn.addEventListener("click",() => {
-    unit ="F";
+
+fahrenheitBtn.addEventListener("click", () => {
+    unit = "F";
+
+    if (currentWeather) {
+        displayWeather(currentWeather, unit);
+    }
 });
 
 console.log(unit);

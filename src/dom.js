@@ -16,11 +16,10 @@ export function displayWeather(data, unit) {
    location.textContent = data.location.name;
 
 
- if (unit === "C") {
+if (unit === "C") {
     temperature.textContent = `${data.current.temp_c} °C`;
 } else {
-    const fahrenheit = (data.current.temp_c * 9 / 5) + 32;
-    temperature.textContent = `${fahrenheit.toFixed(1)} °F`;
+    temperature.textContent = `${data.current.temp_f} °F`;
 }
 
 if (unit === "C") {
