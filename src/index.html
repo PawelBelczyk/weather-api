@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
- <h1>Weather app</h1>
-
-<form id = "weather-form">
-      <button type="button" id="celsius">°C</button>
-    <button type="button" id="fahrenheit">°F</button>
-  
- <label for="user-input">Enter city:</label>
- <input type="text" name="" id="user-input" placeholder="Kraków" required>
-<button type="submit">Search</button>
-
-</form>
-
-<hr>
-
-<p id="message"></p>
-<div class="info-weather">
-    <img id="weather-icon" alt="weather-icon" hidden>
-
-        <p>Location: <span id="location"></span></p>
-        
-        <p>Temperature: <span id="temperature"></span></p>
-        <p>Feels like: <span id="feelsLike"></span></p>
-        <p>Humidity: <span id="humidity"></span></p>
-        <p>Wind: <span id="wind"></span></p>
-        <p>Description: <span id="description"></span></p>
-</div>
+ <div class="container">
+     <h1>Weather app</h1>
+     
+     <form id = "weather-form">
+          <button type="button" id="celsius">°C</button>
+        <button type="button" id="fahrenheit">°F</button>
+     
+     <label for="user-input">Enter city:</label>
+     <input type="text" name="" id="user-input" placeholder="Kraków" required>
+     <button type="submit">Search</button>
+     
+     </form>
+     
+     <hr>
+     
+     <p id="message"></p>
+     <div class="info-weather">
+        <img id="weather-icon" alt="weather-icon" hidden>
+            <p>Location: <span id="location"></span></p>
+     
+            <p>Temperature: <span id="temperature"></span></p>
+            <p>Feels like: <span id="feelsLike"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
+            <p>Wind: <span id="wind"></span></p>
+            <p>Description: <span id="description"></span></p>
+     </div>
+ </div>
 
 
 
