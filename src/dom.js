@@ -8,14 +8,27 @@ const location = document.getElementById("location");
   const description = document.getElementById("description");
   const weather = document.getElementById("weather-icon");
 
-export function displayWeather(data) {
+export function displayWeather(data, unit) {
    
    // weather-icon.src = `https:${data.current.condition.icon}`;
    // weather-icon.hidden = false;
    
    location.textContent = data.location.name;
-   temperature.textContent = `${data.current.temp_c} °C`;
-   feelsLike.textContent = `${data.current.feelslike_c} °C`;
+
+
+ if (unit === "C") {
+    temperature.textContent = `${data.current.temp_c} °C`;
+} else {
+    const fahrenheit = (data.current.temp_c * 9 / 5) + 32;
+    temperature.textContent = `${fahrenheit.toFixed(1)} °F`;
+}
+
+if (unit === "C") {
+    feelsLike.textContent = `${data.current.feelslike_c} °C`;
+} else {
+    feelsLike.textContent = `${data.current.feelslike_f} °F`;
+}
+
    humidity.textContent = `${data.current.humidity}%`;
    wind.textContent = `${data.current.wind_kph} km/h`;
    description.textContent = data.current.condition.text;

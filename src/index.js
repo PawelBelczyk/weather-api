@@ -21,7 +21,7 @@ weatherForm.addEventListener("submit", async (e) => {
     const data = await getWeather(userInput.value);
     message.textContent ="";
     
-    displayWeather(data);
+    displayWeather(data, unit);
 
   } catch (error) {
     clearWeather();    
@@ -30,4 +30,16 @@ weatherForm.addEventListener("submit", async (e) => {
   }
     
 });
+
+
+celsiusBtn.addEventListener("click", () => {
+    unit ="C";
+});
+
+fahrenheitBtn.addEventListener("click",() => {
+    unit ="F";
+});
+
+console.log(unit);
+
 
