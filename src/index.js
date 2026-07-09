@@ -2,9 +2,16 @@
 import {getWeather} from "./weather.js";
 import {displayWeather, clearWeather} from "./dom.js";
 
+let unit ="C";
+
 const weatherForm = document.getElementById("weather-form");
 const userInput = document.getElementById("user-input");
 const message = document.getElementById("message");
+
+const celsiusBtn = document.getElementById("celsius");
+const fahrenheitBtn = document.getElementById("fahrenheit");
+
+
 
 weatherForm.addEventListener("submit", async (e) => {
     e.preventDefault();
