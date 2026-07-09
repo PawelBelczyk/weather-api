@@ -1,6 +1,6 @@
 // const { use } = require("react");
 import {getWeather} from "./weather.js";
-import {displayWeather, clearWeather} from "./dom.js";
+import {displayWeather, clearWeather, changeBackground} from "./dom.js";
 
 let unit ="C";
  let currentWeather = null;
@@ -25,7 +25,7 @@ weatherForm.addEventListener("submit", async (e) => {
     currentWeather = data;
     message.textContent ="";
      displayWeather(data, unit);
-
+    changeBackground(data.current.condition.text);
   } catch (error) {
     clearWeather();    
     message.textContent = error.message;

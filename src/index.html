@@ -12,13 +12,14 @@
      <h1>Weather app</h1>
      
      <form id = "weather-form">
-          <button type="button" id="celsius">°C</button>
-        <button type="button" id="fahrenheit">°F</button>
+    <div class="units">
+    <button type="button" id="celsius" class="unit-btn">°C</button>
+    <button type="button" id="fahrenheit" class="unit-btn">°F</button>
+</div>
      
      <label for="user-input">Enter city:</label>
      <input type="text" name="" id="user-input" placeholder="Kraków" required>
-     <button type="submit">Search</button>
-     
+<button type="submit" class="search-btn">Search</button>     
      </form>
      
      <hr>
