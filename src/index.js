@@ -10,9 +10,10 @@ weatherForm.addEventListener("submit", async (e) => {
     e.preventDefault();
   
   try { 
+    message.textContent="Loading...";
     const data = await getWeather(userInput.value);
-    
     message.textContent ="";
+    
     displayWeather(data);
 
   } catch (error) {
